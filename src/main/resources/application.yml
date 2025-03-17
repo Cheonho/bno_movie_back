@@ -1,0 +1,29 @@
+spring:
+  profiles:
+    include: db
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: 'true'
+  application:
+    name: movie
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  tomcat:
+    use-relative-redirects: 'true'
+  servlet:
+    context-path: /api/v1
+#springdoc:
+#  packages-to-scan: com.bno.movie.controller
+
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql: trace
