@@ -1,6 +1,6 @@
 spring:
   profiles:
-    include: db
+    include: dbLocal
   mvc:
     hiddenmethod:
       filter:
